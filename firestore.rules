@@ -1,0 +1,14 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow read/write access to families collection based on familyId
+    match /families/{familyId} {
+      allow read, write: if true; // For now, allow all access (no auth)
+      
+      // Allow access to subcollections
+      match /{document=**} {
+        allow read, write: if true; // For now, allow all access (no auth)
+      }
+    }
+  }
+}
