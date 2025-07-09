@@ -1,0 +1,30 @@
+{
+  "name": "genkit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node lib/index.js",
+    "dev": "genkit start -- tsx src/index.ts",
+    "deploy": "firebase deploy --only functions"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@genkit-ai/core": "^1.14.0",
+    "@genkit-ai/firebase": "^1.14.0",
+    "@genkit-ai/google-cloud": "^1.14.0",
+    "@types/node": "^24.0.12",
+    "genkit": "^1.14.0",
+    "genkitx-anthropic": "^0.23.1",
+    "typescript": "^5.8.3",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "genkit-cli": "^1.14.0",
+    "tsx": "^4.20.3"
+  }
+}
